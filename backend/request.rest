@@ -1,0 +1,142 @@
+// Create a new user
+POST http://localhost:5000/create-user
+Content-Type: application/json
+
+{
+    "firstname": "Bryant",
+    "lastname": "Sulthan",
+    "password": "123456",
+    "confPassword": "123456",
+    "email": "bryant@gmail.com",
+    "tlp": "0823456872",
+    "role": "admin"
+}
+
+###
+// Register user
+POST http://localhost:5000/registration
+Content-Type: application/json
+
+{
+    "firstname": "Ryan",
+    "lastname": "Sulthan",
+    "username": "starry05",
+    "password": "123456",
+    "confPassword": "123456",
+    "email": "starry05@gmail.com",
+    "tlp": "6290283428"
+}
+
+###
+// Update user profile
+PATCH http://localhost:5000/users/3
+Content-Type: application/json
+
+{
+    "firstname": "Bryant",
+    "lastname": "Sulthan",
+    "password": "123456",
+    "confPassword": "123456",
+    "email": "bryant@gmail.com",
+    "tlp": "0887634567",
+    "address": "Bogor",
+    "role": "admin"
+}
+
+###
+// delete user
+DELETE http://localhost:5000/removeUser/3
+
+###
+// get categories
+GET http://localhost:5000/products-category/6
+
+###
+// Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "bryant@gmail.com",
+    "password": "123456"
+}
+
+###
+// Logout
+DELETE http://localhost:5000/logout
+
+###
+//Profile
+GET http://localhost:5000/me
+
+###
+//Add to Cart
+POST http://localhost:5000/addToCart/2
+Content-Type: application/json
+
+###
+// Update cart qty
+PATCH http://localhost:5000/updateCart/33
+Content-Type: application/json
+
+{
+    "qty": 2
+}
+
+###
+// Transaction
+POST http://localhost:5000/confirm
+Content-Type: application/json
+
+{
+    "total_price": 4000000,
+    "total_disc": 5,
+    "total_qty": 2,
+    "payment": "Bank BRI",
+    "acc_num": "4123565",
+    "address": "Depok"
+}
+
+###
+// Checkout List
+GET http://localhost:5000/checkoutList
+
+###
+// Transaction List Admin
+GET http://localhost:5000/Transactions
+
+###
+// confirmation order admin
+PATCH http://localhost:5000/confirm/6
+
+###
+// cancel order admin
+PATCH http://localhost:5000/cancel/6
+
+###
+// cancel order user
+PATCH http://localhost:5000/cancelOrder/6
+
+###
+// shipping order admin
+PATCH http://localhost:5000/shipping/6
+
+###
+// receive order admin
+PATCH http://localhost:5000/receive/6
+
+###
+// receive order user
+PATCH http://localhost:5000/receiveOrder/6
+
+###
+// Wishlist
+GET http://localhost:5000/wishlist
+
+###
+// add product to wishlist
+POST http://localhost:5000/addToWishlist/1
+
+###
+// remove product from wishlist
+DELETE http://localhost:5000/removeFromWishlist/3
